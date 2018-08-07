@@ -1,5 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { MatTabsModule } from '@angular/material/tabs';
 
 import { AppComponent } from './app.component';
 import { AppHeaderComponent } from './shared/app-header/app-header.component';
@@ -18,6 +21,8 @@ import { DashboardComponent } from './features/dashboard/dashboard.component';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
+    MatTabsModule,
     AppRoutingModule
   ],
   providers: [],
