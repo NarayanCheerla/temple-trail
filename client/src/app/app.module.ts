@@ -10,6 +10,9 @@ import { AppFooterComponent } from './shared/app-footer/app-footer.component';
 import { AppRoutingModule } from './app-routing.module';
 import { LoginComponent } from './features/login/login.component';
 import { DashboardComponent } from './features/dashboard/dashboard.component';
+import { FormDetailsComponent } from './features/form-details/form-details.component';
+import { SearchDetailsComponent } from './features/search-details/search-details.component';
+import { DonorsListComponent } from './features/donors-list/donors-list.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,10 @@ import { DashboardComponent } from './features/dashboard/dashboard.component';
     AppHeaderComponent,
     AppFooterComponent,
     LoginComponent,
-    DashboardComponent
+    DashboardComponent,
+    FormDetailsComponent,
+    SearchDetailsComponent,
+    DonorsListComponent
   ],
   imports: [
     BrowserModule,
