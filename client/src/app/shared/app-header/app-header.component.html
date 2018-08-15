@@ -2,5 +2,6 @@
   <a mat-tab-link *ngFor="let link of links"
     (click)="activeLink = link.label" [active]="activeLink == link.label"
     [routerLink]="link.route">
-    <i class="material-icons">{{ link.icon }}</i> {{ link.label }} </a>
+    <i class="material-icons">{{ link.icon }}</i><span class="d-none d-sm-inline ml-1">{{ link.label }}</span>
+  </a>
 </nav>
