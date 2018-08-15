@@ -1,6 +1,11 @@
 # TEMPLE TRAIL
 
-This Application to store the Donars data into server.
+Application to manage the Donars data.
+
+## Client build using:
+ - Angular v6
+ - [Angular Material](https://material.angular.io/)
+ - Bootstrap v4.1.3 - [Grid](https://getbootstrap.com/docs/4.1/layout/grid/) & [Utilities](https://getbootstrap.com/docs/4.1/utilities/borders/)
 
 ## Step 1
 ../temple-trail/client>npm i
