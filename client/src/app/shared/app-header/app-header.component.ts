@@ -7,11 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppHeaderComponent implements OnInit {
   links = [
-    { label: 'Login', route: '/login', icon: '' },
     { label: 'Dashboard', route: '/dashboard', icon: 'home' },
     { label: 'Add Details', route: '/addDetails', icon: 'add_circle_outline' },
+    { label: 'Donors', route: '/donors', icon: 'group' },
     { label: 'Search', route: '/search', icon: 'search' },
-    { label: 'Donors', route: '/donors', icon: 'group' }
+    { label: 'Login', route: '/login', icon: '' }
   ];
 
   activeLink = this.links[0].label;
