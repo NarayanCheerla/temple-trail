@@ -6,15 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app-header.component.scss']
 })
 export class AppHeaderComponent implements OnInit {
-  links = [
+  linksLeft = [
     { label: 'Dashboard', route: '/dashboard', icon: 'home' },
     { label: 'Add Details', route: '/addDetails', icon: 'add_circle_outline' },
-    { label: 'Donors', route: '/donors', icon: 'group' },
-    { label: 'Search', route: '/search', icon: 'search' },
-    { label: 'Login', route: '/login', icon: '' }
+    { label: 'Donors', route: '/donors', icon: 'group' }
   ];
 
-  activeLink = this.links[0].label;
+  linksRight = [
+    { label: 'Search', route: '/search', icon: 'search' },
+    { label: 'Login', route: '/login', icon: 'vpn_key' }
+  ];
 
   constructor() { }
 

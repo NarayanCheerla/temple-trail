@@ -1,0 +1,34 @@
+@import '../../../assets/theme/variables';
+
+$navbarBgColor: $primaryColor;
+$navLinkColor: #FFFFFF;
+$navLinkActiveColor: $primaryColor;
+$navLinkActiveBgColor: $pageBgColor;
+
+nav {
+  height: $appHeaderHeight;
+  background-color: $navbarBgColor;
+
+  a {
+    display: inline-block;
+    color: $navLinkColor;
+    text-decoration: none;
+    padding: 0 20px;
+    line-height: $appHeaderHeight;
+    height: $appHeaderHeight;
+
+    > * {
+      vertical-align: middle;
+    }
+
+    &.active {
+      background-color: $navLinkActiveBgColor;
+      color: $navbarBgColor;
+    }
+  }
+
+  .float-right {
+    float: right;
+    height: $appHeaderHeight;
+  }
+}

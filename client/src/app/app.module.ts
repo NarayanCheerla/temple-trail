@@ -5,29 +5,19 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { AppHeaderModule, AppFooterModule } from './shared/index';
 import { AppRoutingModule } from './app-routing.module';
-import {
-  LoginComponent,
-  DashboardComponent,
-  FormDetailsComponent,
-  SearchDetailsComponent,
-  DonorsListComponent
-} from './features/index';
+import { FeaturesModule } from './features/features.module';
 
 @NgModule({
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    FeaturesModule,
     AppRoutingModule,
     AppHeaderModule,
     AppFooterModule
   ],
   declarations: [
-    AppComponent,
-    LoginComponent,
-    DashboardComponent,
-    FormDetailsComponent,
-    SearchDetailsComponent,
-    DonorsListComponent
+    AppComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
