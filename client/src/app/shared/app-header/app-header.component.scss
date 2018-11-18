@@ -17,10 +17,6 @@ nav {
     line-height: $appHeaderHeight;
     height: $appHeaderHeight;
 
-    > * {
-      vertical-align: middle;
-    }
-
     &.active {
       background-color: $navLinkActiveBgColor;
       color: $navbarBgColor;
@@ -30,5 +26,12 @@ nav {
   .float-right {
     float: right;
     height: $appHeaderHeight;
+  }
+}
+
+nav a, .user-menu-item {
+  > * {
+    display: inline-block;
+    vertical-align: middle;
   }
 }

@@ -1,3 +1,16 @@
-<p>
-  login works!
-</p>
+<div class="pt-5">
+  <form class="login-form" [formGroup]="loginForm" (ngSubmit)="onLoginSubmit()" autocomplete="off" novalidate>
+    <mat-form-field>
+      <input matInput placeholder="Username" formControlName="username" required>
+      <mat-error *ngIf="username.invalid">Username is required</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="mt-2">
+      <input matInput placeholder="Password" [type]="hidePassword ? 'password' : 'text'" formControlName="password" required>
+      <mat-icon matSuffix (click)="hidePassword = !hidePassword">{{hidePassword ? 'visibility_off' : 'visibility'}}</mat-icon>
+      <mat-error *ngIf="password.invalid">Password is required</mat-error>
+    </mat-form-field>
+
+    <button mat-flat-button class="mt-4" type="submit" color="primary">Login</button>
+  </form>
+</div>

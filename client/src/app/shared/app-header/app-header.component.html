@@ -1,10 +1,28 @@
 <nav>
-  <a *ngFor="let link of linksLeft" [routerLink]="link.route" routerLinkActive="active">
-    <i class="material-icons">{{ link.icon }}</i><span class="d-none d-sm-inline ml-1">{{ link.label }}</span>
-  </a>
-  <div class="float-right">
-    <a *ngFor="let link of linksRight" [routerLink]="link.route" routerLinkActive="active">
+  <ng-container *ngFor="let link of linksLeft">
+    <a [routerLink]="link.route" routerLinkActive="active"
+      *ngIf="link.label === 'Dashboard' || (authService.isUserAuthenticated && link.label !== 'Dashboard')">
       <i class="material-icons">{{ link.icon }}</i><span class="d-none d-sm-inline ml-1">{{ link.label }}</span>
+    </a>
+  </ng-container>
+  <div class="float-right">
+    <ng-container *ngFor="let link of linksRight">
+      <a [routerLink]="link.route" routerLinkActive="active"
+        *ngIf="(authService.isUserAuthenticated && link.label !== 'Login') || (!authService.isUserAuthenticated && link.label === 'Login')">
+        <i class="material-icons">{{ link.icon }}</i><span class="d-none d-sm-inline ml-1">{{ link.label }}</span>
+      </a>
+    </ng-container>
+    <a [matMenuTriggerFor]="menu" *ngIf="authService.isUserAuthenticated">
+      <i class="material-icons">account_circle</i><span class="d-none d-sm-inline ml-1">User</span>
     </a>
   </div>
 </nav>
+
+<mat-menu #menu="matMenu">
+  <a mat-menu-item class="user-menu-item">
+    <i class="material-icons">edit</i><span class="ml-1">Edit Profile</span>
+  </a>
+  <a mat-menu-item class="user-menu-item" (click)="onLogout()">
+    <i class="material-icons">exit_to_app</i><span class="ml-1">Logout</span>
+  </a>
+</mat-menu>

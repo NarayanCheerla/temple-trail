@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { AppHeaderModule, AppFooterModule } from './shared/index';
 import { AppRoutingModule } from './app-routing.module';
 import { FeaturesModule } from './features/features.module';
+import { AuthService } from './shared/index';
 
 @NgModule({
   imports: [
@@ -19,7 +20,9 @@ import { FeaturesModule } from './features/features.module';
   declarations: [
     AppComponent
   ],
-  providers: [],
+  providers: [
+    AuthService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
